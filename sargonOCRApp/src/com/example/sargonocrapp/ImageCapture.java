@@ -53,7 +53,7 @@ public class ImageCapture extends Activity
     public void onCreate(Bundle savedInstanceState) 
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
+        setContentView(R.layout.image_capture);
 
         //Create an instance of Camera
         mCamera = getCameraInstance();
@@ -79,30 +79,8 @@ public class ImageCapture extends Activity
             	mCamera.takePicture(shutterCallback, null, mPicture);
         	}
         });
-        
-        Button ocrBtn =  (Button)findViewById(R.id.ocr_btn);
-        ocrBtn.setOnClickListener(new OnClickListener()
-        {
-        	public void onClick(View v)
-        	{
-	        	Intent captureIntent = new Intent(ImageCapture.this, ImageOCR.class);
-	        	//we will handle the returned data in onActivityResult
-	        	captureIntent.putExtra("imagePath", filePathtoImage.getPath());
-	            startActivityForResult(captureIntent, OCR_RESULT);
-        	}
-        }); 
-        Button dbBtn = (Button)findViewById(R.id.database_btn);
-        dbBtn.setOnClickListener(new OnClickListener()
-        {
-        	public void onClick(View v)
-        	{
-	    		Intent intentDB = new Intent(ImageCapture.this, AddItem.class );
-	    		intentDB.putExtra( "resultTxt" , ResultsTEXT );
-	    		startActivity(intentDB);        		
-        	}
-        });   
     }
-		
+         
     private final ShutterCallback shutterCallback = new ShutterCallback() 
     {
     	public void onShutter()
@@ -150,15 +128,13 @@ public class ImageCapture extends Activity
             {
             	//edit message
             }
-            LayoutInflater inflater = getLayoutInflater();
-            //add a toast to show the picture that was captured
-//            View view = inflater.inflate(R.layout.image_toast, (ViewGroup) findViewById(R.id.toast_imageview));
-//            Toast toast = new Toast(this);
-//            toast.setView(view);
-//            toast.show();
-        }
-    };
-    
+            Intent intent = new Intent(ImageCapture.this, displayImage.class);
+            intent.putExtra("imagePath", filePathtoImage.getPath());
+            startActivity(intent);      
+            finish();   
+        };
+	
+	};
     
 	/** Check if this device has a camera */
 	public boolean checkCameraHardware(Context context) 
@@ -217,23 +193,14 @@ public class ImageCapture extends Activity
         return mediaFile;
     }
     
-//    private void releaseCamera()
-//    {
-//        if (mCamera != null)
-//        {
-//            mCamera.release();        // release the camera for other applications
-//            mCamera = null;
-//        }
-//    }
-
-      @Override
-      protected void onActivityResult(int requestCode, int resultCode, Intent data) 
-      {		
-	    			//display the returned text at the bottom of the screen				    			
-	    			ResultsTEXT = data.getStringExtra("OCRText");
-	    			EditText OCRresults = (EditText) findViewById(R.id.Results_txt);
-	    			OCRresults.setText(ResultsTEXT);
-      }
+    private void releaseCamera()
+    {
+        if (mCamera != null)
+        {
+            mCamera.release();        // release the camera for other applications
+            mCamera = null;
+        }
+    }
 }//end class
 	    	
 	    	

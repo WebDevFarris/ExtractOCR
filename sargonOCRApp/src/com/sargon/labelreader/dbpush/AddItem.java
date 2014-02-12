@@ -25,11 +25,11 @@ public class AddItem extends Activity implements BoxSelectionDialog.Communicator
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
+		setContentView(R.layout.edit_results);
 		manager = getFragmentManager();
 		//get ocr text results
 		Intent intentResults = getIntent();
-		ocrResults = intentResults.getExtras().getString("resultTxt");
+		ocrResults = intentResults.getExtras().getString("OCRtext");
 		linearParse();
 	}
 	

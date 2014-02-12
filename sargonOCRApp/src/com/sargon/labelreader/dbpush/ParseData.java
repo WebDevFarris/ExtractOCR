@@ -49,9 +49,10 @@ public class ParseData {
 		if(match)
 		{
 			target = data.get(i+1);
-			if(target.equalsIgnoreCase("NO") 
+			if(target.equalsIgnoreCase("#") 
 					|| target.equalsIgnoreCase("number")
 					|| target.equalsIgnoreCase("NO."))
+				    
 				serial =data.get(i+2);
 			else
 				serial = target;

@@ -26,47 +26,50 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int pic_border=0x7f020001;
     }
     public static final class id {
-        public static final int ASSET_NUMBER=0x7f080003;
-        public static final int ASSET_NUMBER_TEXT=0x7f080002;
-        public static final int ENGINE_MODEL_TYPE=0x7f080005;
-        public static final int ENGINE_MODEL_TYPE_TEXT=0x7f080004;
-        public static final int PART_NUMBER=0x7f080007;
-        public static final int PART_NUMBER_TEXT=0x7f080006;
-        public static final int Results_txt=0x7f08001a;
-        public static final int SERIAL_NUMBER=0x7f080001;
-        public static final int SERIAL_NUMBER_TEXT=0x7f080000;
-        public static final int action_settings=0x7f08001e;
-        public static final int button1=0x7f080013;
-        public static final int button_capture=0x7f080017;
-        public static final int camera_preview=0x7f080016;
-        public static final int cancel=0x7f08000c;
-        public static final int database_btn=0x7f080019;
-        public static final int editField=0x7f080008;
-        public static final int editText1=0x7f08001c;
-        public static final int equipment_confirm_button=0x7f080009;
-        public static final int ocr_btn=0x7f080018;
-        public static final int ocr_result_list=0x7f08001d;
-        public static final int ok=0x7f08000b;
-        public static final int progressBar1=0x7f08001b;
-        public static final int radio0=0x7f08000f;
-        public static final int radio1=0x7f080010;
-        public static final int radio2=0x7f080011;
-        public static final int radio3=0x7f080012;
-        public static final int radioGroup1=0x7f08000d;
-        public static final int result=0x7f080014;
-        public static final int textView1=0x7f08000e;
-        public static final int toDB=0x7f08000a;
-        public static final int toast_imageview=0x7f080015;
+        public static final int ASSET_NUMBER=0x7f080010;
+        public static final int ASSET_NUMBER_TEXT=0x7f08000f;
+        public static final int ENGINE_MODEL_TYPE=0x7f080012;
+        public static final int ENGINE_MODEL_TYPE_TEXT=0x7f080011;
+        public static final int PART_NUMBER=0x7f080014;
+        public static final int PART_NUMBER_TEXT=0x7f080013;
+        public static final int SERIAL_NUMBER=0x7f08000e;
+        public static final int SERIAL_NUMBER_TEXT=0x7f08000d;
+        public static final int action_settings=0x7f08001f;
+        public static final int addNewItem=0x7f08001c;
+        public static final int button1=0x7f080008;
+        public static final int button_capture=0x7f080019;
+        public static final int camera_preview=0x7f080018;
+        public static final int cancel=0x7f080001;
+        public static final int displayimage_imageview=0x7f08000c;
+        public static final int editField=0x7f080015;
+        public static final int editText1=0x7f08001b;
+        public static final int equipment_confirm_button=0x7f080016;
+        public static final int ocr_result_list=0x7f08001e;
+        public static final int ok=0x7f080000;
+        public static final int radio0=0x7f080004;
+        public static final int radio1=0x7f080005;
+        public static final int radio2=0x7f080006;
+        public static final int radio3=0x7f080007;
+        public static final int radioGroup1=0x7f080002;
+        public static final int result=0x7f080009;
+        public static final int retake=0x7f08000b;
+        public static final int savedata=0x7f08001d;
+        public static final int textView1=0x7f080003;
+        public static final int toDB=0x7f080017;
+        public static final int toast_imageview=0x7f08001a;
+        public static final int use=0x7f08000a;
     }
     public static final class layout {
-        public static final int activity_main=0x7f030000;
-        public static final int box_selection_prompt=0x7f030001;
-        public static final int display_activity=0x7f030002;
-        public static final int image_toast=0x7f030003;
-        public static final int main=0x7f030004;
-        public static final int orcr_layout=0x7f030005;
-        public static final int string_checkbox_dialog=0x7f030006;
-        public static final int submit_confirm_dialog=0x7f030007;
+        public static final int box_selection_prompt=0x7f030000;
+        public static final int display_activity=0x7f030001;
+        public static final int display_image=0x7f030002;
+        public static final int edit_results=0x7f030003;
+        public static final int image_capture=0x7f030004;
+        public static final int image_toast=0x7f030005;
+        public static final int main_activity=0x7f030006;
+        public static final int orcr_layout=0x7f030007;
+        public static final int string_checkbox_dialog=0x7f030008;
+        public static final int submit_confirm_dialog=0x7f030009;
     }
     public static final class menu {
         public static final int main=0x7f070000;
@@ -94,6 +97,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int part_number=0x7f05000d;
         public static final int picture=0x7f050004;
         public static final int serial_number=0x7f05000c;
+        public static final int titleBox=0x7f050016;
     }
     public static final class style {
         /** 

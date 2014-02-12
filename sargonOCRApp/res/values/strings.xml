@@ -24,6 +24,7 @@
     <string name="confirmation_message">Are you sure you want to submit? Please make sure that all the information has been validated</string>
     <string name="box_selection_message">Please select which box you would like to edit</string>
     <string name="checkbox_message">Select the fields that you would like to insert from the information retrieved from the label</string>
+    <string name="titleBox">Sargon Mobile OCR Application</string>
 	
 	
 </resources>

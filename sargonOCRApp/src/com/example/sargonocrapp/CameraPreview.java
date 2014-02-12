@@ -16,8 +16,7 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
     //Constructor that obtains context and camera
     public CameraPreview(Context context, Camera camera) {
         super(context);
-        this.mCamera = camera;
-        this.mCamera.setDisplayOrientation(90);      
+        this.mCamera = camera;      
         this.mSurfaceHolder = this.getHolder();
         this.mSurfaceHolder.addCallback(this); // we get notified when underlying surface is created and destroyed
     }
