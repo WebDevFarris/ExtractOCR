@@ -1,0 +1,8 @@
+Project Tasks
+-------------
+
+Include Cropping of image after capture
+Progress/Loading bars where necessary
+Implement Parsing Algorithm
+Enhance Image preprocessing
+Compare OCR Engines within Tesseract (0,1,2,3)
