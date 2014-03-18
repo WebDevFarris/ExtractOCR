@@ -1,6 +1,16 @@
 package com.sargon.labelreader.dbpush;
 
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
+
+import org.apache.http.NameValuePair;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.message.BasicNameValuePair;
 
 import android.os.Bundle;
 import android.app.Activity;
@@ -9,6 +19,7 @@ import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
 import android.widget.*;
+
 
 import com.example.sargonocrapp.R;
 import com.sargon.labelreader.database.Equipment;
@@ -43,5 +54,8 @@ public class DisplayDB extends Activity {
     	finish();
     	startActivity(intent);
     }
-
+    @Override
+    public void onBackPressed() 
+    {
+    }
 }

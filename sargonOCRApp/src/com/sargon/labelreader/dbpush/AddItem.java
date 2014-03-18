@@ -5,13 +5,13 @@ import java.util.HashMap;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.FragmentManager;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
+
 import com.example.sargonocrapp.R;
 import com.sargon.labelreader.database.Equipment;
 import com.sargon.labelreader.database.MySQLiteHelper;
@@ -30,7 +30,7 @@ public class AddItem extends Activity implements BoxSelectionDialog.Communicator
 		//get ocr text results
 		Intent intentResults = getIntent();
 		ocrResults = intentResults.getExtras().getString("OCRtext");
-		linearParse();
+		Parse();
 	}
 	
 	public String sendResults()
@@ -38,13 +38,18 @@ public class AddItem extends Activity implements BoxSelectionDialog.Communicator
 		return ocrResults;
 	}
 	
-	public void linearParse()
+	public void Parse()
 	{
-
-		ParseData linear = new ParseData( ocrResults );
-		HashMap results = linear.linearMatch();
+		ParseData parse = new ParseData( ocrResults );
+		HashMap results = parse.getData();
 		EditText set = (EditText)findViewById(R.id.SERIAL_NUMBER);
 		set.setText((String)results.get("serial"));
+		set = (EditText)findViewById(R.id.ASSET_NUMBER);
+		set.setText((String)results.get("asset"));
+		set = (EditText)findViewById(R.id.PART_NUMBER);
+		set.setText((String)results.get("part"));
+		set = (EditText)findViewById(R.id.ENGINE_MODEL_TYPE);
+		set.setText((String)results.get("engine"));
 	}
 	
 	@Override
@@ -103,6 +108,24 @@ public class AddItem extends Activity implements BoxSelectionDialog.Communicator
 				EngineEntry.getText().toString());
 		db.add(entry);
 		db.close();
+		String message;
+		if(SerialEntry.getText().toString()==null)
+			message = "None ";
+		else 
+			message  = SerialEntry.getText().toString() + " ";
+		if(PartEntry.getText().toString()==null)
+			message = message + "None ";
+		else
+			message = message + PartEntry.getText().toString() + " ";
+		if(AssetEntry.getText().toString()==null)
+			message = message + "None ";
+		else
+			message = message + AssetEntry.getText().toString() + " ";
+		if(EngineEntry.getText().toString()==null)
+			message = message + "None ";
+		else
+			message = message + EngineEntry.getText().toString();
+		new UploadData().execute(message);
 		Toast.makeText(this,"Submission Complete", Toast.LENGTH_LONG).show();
 	}
 
@@ -111,4 +134,8 @@ public class AddItem extends Activity implements BoxSelectionDialog.Communicator
 		// TODO Auto-generated method stub
 		target.setText(data);
 	}
+    @Override
+    public void onBackPressed() 
+    {
+    }
 }

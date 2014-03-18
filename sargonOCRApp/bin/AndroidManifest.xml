@@ -5,57 +5,70 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="16"
+        android:minSdkVersion="11"
         android:targetSdkVersion="18" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 	<uses-feature android:name="android.hardware.camera" />
  	<uses-permission android:name="android.permission.CAMERA" />
  	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-   
+    <uses-permission android:name="android.permission.INTERNET" /> 
  	
  	<application
-        android:allowBackup="true"
+        android:allowBackup="false"
         android:icon="@drawable/ic_launcher"
-        android:label="@string/app_name"
-        android:theme="@style/AppTheme" 
-        android:largeHeap="true">
+        android:theme="@style/Background" 
+        android:largeHeap="true" 
+        android:debuggable="true" 
+        android:hardwareAccelerated="false">
         
         <activity
-            android:name="com.example.sargonocrapp.mainActivity"
+            android:name="com.example.sargonocrapp.MainActv"
             android:screenOrientation="landscape"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:label="@string/app_name"
-            android:theme="@style/FullscreenTheme" >
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>           
-        <activity
-            android:name="com.example.sargonocrapp.ImageCapture"
-             android:screenOrientation="landscape"           
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:label="@string/app_name"
-            android:theme="@style/FullscreenTheme" >
         </activity> 
         <activity
-            android:name="com.example.sargonocrapp.displayImage"
+            android:name="com.example.sargonocrapp.GetFromGalleryActv"
+             android:screenOrientation="landscape"           
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name" >
+        </activity>
+        
+        <activity
+            android:name="com.example.sargonocrapp.ImageCaptureActv"
+             android:screenOrientation="landscape"           
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name" >
+        </activity> 
+        <activity
+            android:name="com.example.sargonocrapp.DisplayImageActv"
             android:screenOrientation="landscape"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:label="@string/app_name"
-            android:theme="@style/FullscreenTheme" >
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.example.sargonocrapp.ImageCropActv"
+            android:screenOrientation="landscape"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name" >
         </activity>       
         <activity
             android:screenOrientation="landscape"
-            android:name="com.example.sargonocrapp.ImageOCR"
+            android:name="com.example.sargonocrapp.ImageOCRActv"
             android:label="@string/app_name"> 
         </activity>
          <activity
             android:name="com.sargon.labelreader.dbpush.AddItem"
+            android:screenOrientation="landscape"
             android:label="@string/app_name" >
         </activity>
         <activity
             android:name="com.sargon.labelreader.dbpush.DisplayDB"
+            android:screenOrientation="landscape"
             android:label="@string/app_name" >
          </activity>
     </application>

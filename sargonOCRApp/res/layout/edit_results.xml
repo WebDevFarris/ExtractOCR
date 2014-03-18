@@ -2,85 +2,121 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:background="@drawable/background"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/left_padding"
+    android:paddingRight="@dimen/right_padding"
     tools:context=".AddItem" >
-	
-		<TextView
-		    android:id="@+id/SERIAL_NUMBER_TEXT"
-		    android:layout_width="wrap_content"
-		    android:layout_height="wrap_content"
-		    android:text="@string/serial_number"
-		    android:textAppearance="?android:attr/textAppearanceLarge" />
-		<EditText
-		    android:id="@+id/SERIAL_NUMBER"
-		    android:layout_width="match_parent"
-		    android:layout_height="wrap_content"
-		    android:ems="10"
-		    android:hint="@string/serial_number"
-		    android:textSize="22sp" />
-		<TextView
-		    android:id="@+id/ASSET_NUMBER_TEXT"
-		    android:layout_width="wrap_content"
-		    android:layout_height="wrap_content"
-		    android:text="@string/asset_number"
-		    android:textAppearance="?android:attr/textAppearanceLarge" />
-		<EditText
-		    android:id="@+id/ASSET_NUMBER"
-		    android:layout_width="match_parent"
-		    android:layout_height="wrap_content"
-		    android:ems="10"
-		    android:hint="@string/asset_number"
-		    android:textSize="22sp" />
-		
-		<TextView
-		    android:id="@+id/ENGINE_MODEL_TYPE_TEXT"
-		    android:layout_width="wrap_content"
-		    android:layout_height="wrap_content"
-		    android:text="@string/engine_model_type"
-		    android:textAppearance="?android:attr/textAppearanceLarge" />
-		
-		<EditText
-	        android:id="@+id/ENGINE_MODEL_TYPE"
-	        android:layout_width="match_parent"
-	        android:layout_height="wrap_content"
-	        android:ems="10"
-	        android:hint="@string/engine_model_type"
-	        android:textSize="22sp" />
-		
-		<TextView
-		    android:id="@+id/PART_NUMBER_TEXT"
-		    android:layout_width="wrap_content"
-		    android:layout_height="wrap_content"
-		    android:text="@string/part_number"
-		    android:textAppearance="?android:attr/textAppearanceLarge" />
-		
-		<EditText
-		    android:id="@+id/PART_NUMBER"
-		    android:layout_width="match_parent"
-		    android:layout_height="wrap_content"
-		    android:ems="10"
-		    android:hint="@string/part_number"
-		    android:textSize="22sp" />
-		
-	   <Button
-	        android:id="@+id/editField"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:onClick="editField"
-	        android:text="Change from label list" />
-		
-	    <Button
-	        android:id="@+id/equipment_confirm_button"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:onClick="insert"
-	        android:text="ADD ENTRY" />
+    
+    		<LinearLayout
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    		    android:layout_gravity="center_vertical"
+    		    android:layout_weight="50"
+    		    android:orientation="vertical"
+    		    android:paddingLeft="@dimen/left_padding"
+    		    android:paddingRight="@dimen/right_padding" >
 
-		<Button
-		    android:id="@+id/toDB"
-		    android:layout_width="wrap_content"
-		    android:layout_height="wrap_content"
-		    android:onClick="toDB"
-		    android:text="VIEW PARTS" />
-			
-</LinearLayout>
+    		    <Button
+    		        android:id="@+id/editField"
+    		        android:layout_width="wrap_content"
+    		        android:layout_height="wrap_content"
+    		        android:minHeight="@dimen/min_button_height"
+    		        android:minWidth="@dimen/min_button_width"
+    		        android:onClick="editField"
+    		        android:text="CHANGE LABEL FROM LIST" />
+
+    		    <Button
+    		        android:id="@+id/equipment_confirm_button"
+    		        android:layout_width="match_parent"
+    		        android:layout_height="wrap_content"
+    		        android:minHeight="@dimen/min_button_height"
+    		        android:minWidth="@dimen/min_button_width"
+    		        android:onClick="insert"
+    		        android:text="ADD ENTRY" />
+
+    		    <Button
+    		        android:id="@+id/toDB"
+    		        android:layout_width="match_parent"
+    		        android:layout_height="wrap_content"
+    		        android:minHeight="@dimen/min_button_height"
+    		        android:minWidth="@dimen/min_button_width"
+    		        android:onClick="toDB"
+    		        android:text="VIEW PARTS" />
+
+    		</LinearLayout>
+
+    	    <LinearLayout
+    	        android:layout_width="match_parent"
+    	        android:layout_height="wrap_content"
+    	        android:layout_gravity="center_horizontal"
+    	        android:layout_marginRight="25dp"
+    	        android:layout_weight="50"
+    	        android:orientation="vertical" >
+
+    	        <TextView
+    	            android:id="@+id/SERIAL_NUMBER_TEXT"
+    	            android:layout_width="wrap_content"
+    	            android:layout_height="wrap_content"
+    	            android:text="@string/serial_number"
+    	            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    	        <EditText
+    	            android:id="@+id/SERIAL_NUMBER"
+    	            android:layout_width="match_parent"
+    	            android:layout_height="wrap_content"
+    	            android:ems="10"
+    	            android:text="@string/EditTextDefault"
+    	            android:textSize="22sp" />
+
+    	        <TextView
+    	            android:id="@+id/ASSET_NUMBER_TEXT"
+    	            android:layout_width="wrap_content"
+    	            android:layout_height="wrap_content"
+    	            android:text="@string/asset_number"
+    	            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    	        <EditText
+    	            android:id="@+id/ASSET_NUMBER"
+    	            android:layout_width="match_parent"
+    	            android:layout_height="wrap_content"
+    	            android:ems="10"
+    	            android:text="@string/EditTextDefault"
+    	            android:textSize="22sp" />
+
+    	        <TextView
+    	            android:id="@+id/ENGINE_MODEL_TYPE_TEXT"
+    	            android:layout_width="match_parent"
+    	            android:layout_height="wrap_content"
+    	            android:layout_weight="50"
+    	            android:text="@string/engine_model_type"
+    	            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    	        <EditText
+    	            android:id="@+id/ENGINE_MODEL_TYPE"
+    	            android:layout_width="match_parent"
+    	            android:layout_height="wrap_content"
+    	            android:layout_weight="50"
+    	            android:ems="10"
+    	            android:text="@string/EditTextDefault"
+    	            android:textSize="22sp" />
+
+    	        <TextView
+    	            android:id="@+id/PART_NUMBER_TEXT"
+    	            android:layout_width="wrap_content"
+    	            android:layout_height="wrap_content"
+    	            android:layout_weight="50"
+    	            android:text="@string/part_number"
+    	            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    	        <EditText
+    	            android:id="@+id/PART_NUMBER"
+    	            android:layout_width="match_parent"
+    	            android:layout_height="wrap_content"
+    	            android:layout_weight="50"
+    	            android:ems="10"
+    	            android:text="@string/EditTextDefault"
+    	            android:textSize="22sp" />
+
+    	    </LinearLayout>
+    	</LinearLayout>	

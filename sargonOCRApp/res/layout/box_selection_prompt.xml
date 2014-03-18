@@ -1,43 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background"
     android:orientation="horizontal" >
 
-    <Button
-        android:id="@+id/ok"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/cancel"
-        android:layout_alignBottom="@+id/cancel"
-        android:layout_toRightOf="@+id/cancel"
-        android:text="@string/ok" />
+        android:layout_gravity="center_vertical"
+        android:orientation="vertical" >
 
-    <Button
-        android:id="@+id/cancel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/radioGroup1"
-        android:layout_marginLeft="14dp"
-        android:text="@string/cancel" />
+        <Button
+            android:id="@+id/ok"
+            style="@style/MyCustomButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:minHeight="@dimen/min_button_height"
+            android:minWidth="@dimen/min_button_width"
+            android:text="@string/ok" />
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:text="@string/box_selection_message"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        <Button
+            android:id="@+id/cancel"
+            style="@style/MyCustomButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:minHeight="@dimen/min_button_height"
+            android:minWidth="@dimen/min_button_width"
+            android:text="@string/cancel" />
+
+    </LinearLayout>
 
     <RadioGroup
         android:id="@+id/radioGroup1"
-        android:layout_width="191dp"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/textView1"
-        android:layout_weight="0.52" >
+        android:layout_gravity="center_vertical" >
 
         <RadioButton
             android:id="@+id/radio0"
@@ -64,5 +64,4 @@
             android:layout_height="wrap_content"
             android:text="@string/engine_model_type" />
     </RadioGroup>
-
-</RelativeLayout>
+</LinearLayout>

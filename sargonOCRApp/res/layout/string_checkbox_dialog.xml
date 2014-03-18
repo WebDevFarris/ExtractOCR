@@ -2,45 +2,56 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    >
-    <TextView
-	            android:id="@+id/textView1"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:text="@string/checkbox_message"
-	            android:textAppearance="?android:attr/textAppearanceLarge" />
+    android:background="@drawable/background"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/left_padding"
+        android:paddingRight="@dimen/right_padding" >
+
+        <Button
+            android:id="@+id/ok"
+            style="@style/MyCustomButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:minHeight="@dimen/min_button_height"
+            android:minWidth="@dimen/min_button_width"
+            android:text="@string/ok" />
+
+        <Button
+            android:id="@+id/cancel"
+            style="@style/MyCustomButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:minHeight="@dimen/min_button_height"
+            android:minWidth="@dimen/min_button_width"
+            android:text="@string/cancel" />
+
+    </LinearLayout>
+
 	<ScrollView
-    android:layout_width="fill_parent"
-    android:layout_height="0dp"
-    android:scrollbars="none"
-    android:layout_weight=".2">
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:scrollbars="none|vertical" >
     
 	    <LinearLayout
-	      android:layout_width="fill_parent"
-	      android:layout_height="fill_parent"
+	      android:layout_width="wrap_content"
+	      android:layout_height="wrap_content"
 	      android:orientation="vertical">
 
-	        
-	      
 		     <TableLayout
 		        android:id="@+id/ocr_result_list"
-		        android:layout_width="fill_parent"
-		        android:layout_height="fill_parent">
-		        
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content">    
 		    </TableLayout>
 		</LinearLayout>
 	</ScrollView>
-    <Button
-        android:id="@+id/ok"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/ok" />
-
-    <Button
-        android:id="@+id/cancel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/cancel" />
+    
   
 </LinearLayout>

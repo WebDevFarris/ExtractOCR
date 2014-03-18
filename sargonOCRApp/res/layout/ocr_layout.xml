@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/left_padding"
+        android:paddingRight="@dimen/right_padding" >
+
+        <Button
+            android:id="@+id/savedata"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:minHeight="@dimen/min_button_height"
+            android:minWidth="@dimen/min_button_width"
+            android:paddingBottom="@dimen/padding_bottom"
+            android:text="Save" 
+            android:visibility="invisible"/>
+
+        <ProgressBar
+            android:id="@+id/progressBar2"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="80dp"
+            android:minWidth="80dp"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/tryagain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/min_button_height"
+            android:minWidth="@dimen/min_button_width"
+            android:text="Try Again"
+            android:visibility="invisible" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/ocrresults"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:ems="10"
+        android:text="Processing Image" >
+    </TextView>
+
+    <ImageView
+        android:id="@+id/ocrimage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:contentDescription="ocr image" />
+
+</LinearLayout>
